@@ -1,0 +1,46 @@
+1.count = 0
+print(2, end=" ")
+for i in range(2, 501):
+    j = 2
+    while True:
+        if i % j != 0:
+            j += 1
+        else:
+            break
+        if j == i:
+            print(i, end=" ")
+            count += 1
+            if count % 9 == 0:
+                print(end="\n")
+
+--------------------------------------------------------------------------------------------------------
+2.l0 = []
+for i in range(5):
+    num = eval(input())
+    l0.append(num)
+for i in range(len(l0)):
+    print(l0[i], end="")
+
+--------------------------------------------------------------------------------------------------------
+
+3.count = 0
+l0 = []
+for i in range(10):
+    count += 1
+    num = eval(input(f'"请输入第{count}个100以内的数字: '))
+    l0.append(num)
+for a in range(len(l0)):
+    for b in range(len(l0) - a - 1):
+        if l0[b] > l0[b + 1]:
+            l0[b + 1], l0[b] = l0[b], l0[b + 1]
+print(l0)
+print(f'min_num:{l0[0]},max_num:{l0[9]}')
+
+--------------------------------------------------------------------------------------------------------
+4.who = ['A', 'B', 'C', 'D']
+for i in who:
+    tell = (i != 'A') + (i == 'C') + (i == 'D') + (i != 'D')
+    if tell == 3:
+        print("凶手是：", i)
+
+ 
